@@ -71,9 +71,9 @@ def extract_features(document):
 		
 #function to extract unique words from the list
 def unique_list(l):
-	    ulist = []
-	    [ulist.append(x) for x in l if x not in ulist]
-	    return ulist
+	ulist = []
+	[ulist.append(x) for x in l if x not in ulist]
+	return ulist
 	    
 #function to read the content of the given file
 def read_words(words_file2):
@@ -102,7 +102,7 @@ def classi(lst,sent):
 	
 	word_features = get_word_features(get_words_in_senti(lst))
 
-	#random.shuffle(lst)
+	random.shuffle(lst)
 	training_set = nltk.classify.apply_features(extract_features, lst)
 
 	train_set, test_set = training_set[len(training_set)*3/4:], training_set[len(training_set)*1/2:len(training_set)]
@@ -145,7 +145,6 @@ while True:
     print "Stemming Words.."
     stemsent1 = stemwords(wordll)
     print "Making List.."
-
     final_words = list(set(stemsent1))
     stemsent2 = lowr(final_words)
     sent2 = ' '.join(map(str, final_words))
