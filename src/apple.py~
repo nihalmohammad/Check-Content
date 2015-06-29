@@ -114,14 +114,14 @@ def classi(lst,sent):
 		
 listapple = []
 print "Reading Apple Computer's File.."
-listofwords = read_words('/home/nihalm/apple-computers.txt')
+listofwords = read_words('/home/nihalm/Check-Content/data/apple-computers.txt')
 listword = stemwords(listofwords)
 filtered_words = listword
 final_words = list(set(filtered_words))
 listapple += lowr('computer-company')
 
 print "Reading Apple Fruit's File.."	
-listofwords = read_words('/home/nihalm/apple-fruit.txt')
+listofwords = read_words('/home/nihalm/Check-Content/data/apple-fruit.txt')
 listword = stemwords(listofwords)
 filtered_words = listword
 final_words = list(set(filtered_words))

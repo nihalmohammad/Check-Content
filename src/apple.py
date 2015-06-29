@@ -89,6 +89,7 @@ def read_words(words_file2):
     word_list5 = [punctuation.sub("", word) for word in words_list3]
     sentu = ' '.join(map(str, unique_list(word_list5)))
     return sentu  
+    
 #funtiion to remove duplicate entries
 def unique_list(l):
     ulist = []
@@ -130,9 +131,9 @@ listapple += lowr('fruit')
 #txtfile = open('/home/nihalm/sample.txt','w')
 #txtfile.write(str(listapple))
 #txtfile.close()
-	#input the path of the file to read
+
 wordl = []
-print "Reading Input File.."
+print "Please Input File.."
 while True:
     wordl = []
     wordl  = sys.stdin.readline()
